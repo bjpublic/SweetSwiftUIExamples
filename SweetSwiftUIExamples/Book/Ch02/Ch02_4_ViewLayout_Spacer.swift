@@ -21,14 +21,14 @@ private extension Ch02_4_ViewLayout_Spacer {
   struct Example01: View {
     var body: some View {
       // 1) 시각적 요소 적용 불가
-//      HStack {
-//        Spacer()
-//          .background(Color.blue)
-//      }
+      HStack {
+        Spacer()
+          .background(Color.blue)
+      }
       
       // 2) 시각적 요소 적용 가능
-      Spacer()
-        .background(Color.blue)
+//      Spacer()
+//        .background(Color.blue)
     }
   }
   
@@ -39,12 +39,12 @@ private extension Ch02_4_ViewLayout_Spacer {
     var body: some View {
       HStack {
         Spacer()
-          .frame(width: 100)
+//          .frame(width: 100)
         Text("Spacer")
           .font(.title)
-          .background(Color.green)
+          .background(Color.yellow)
       }
-      .background(Color.orange)
+      .background(Color.blue)
     }
   }
   
@@ -54,11 +54,11 @@ private extension Ch02_4_ViewLayout_Spacer {
   struct Example03: View {
     var body: some View {
       HStack {
-        Text("Spacer MinLength").font(.title)
+        Text("Spacer MinLength").font(.title).foregroundColor(.white)
         Spacer(minLength: 100)
-        Text("Spacer").font(.title).background(Color.green)
+        Text("Spacer").font(.title).background(Color.yellow)
       }
-      .background(Color.orange)
+      .background(Color.blue)
     }
   }
   
@@ -69,12 +69,12 @@ private extension Ch02_4_ViewLayout_Spacer {
   struct Example04: View {
     var body: some View {
       ZStack {
-        Color.clear  // Color.clear로도 수정해 Spacer와 비교해 보세요.
+        Color.clear  // Color.clear와 Spacer를 비교해 보세요.
         Text("Spacer")
           .font(.title)
-          .background(Color.green)
+          .background(Color.yellow)
       }
-      .background(Color.orange)
+      .background(Color.blue)
     }
   }
   
