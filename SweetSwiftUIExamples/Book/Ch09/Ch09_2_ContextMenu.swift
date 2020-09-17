@@ -50,6 +50,7 @@ private extension Ch09_2_ContextMenu {
   
   /// 메뉴 아이템에는 텍스트와 이미지를 함께 활용할 수 있으며,
   /// 메뉴 개수도 상황에 따라 유동적으로 변경할 수 있습니다.
+  /// => iOS 14.0에서 애니메이션 버그가 있습니다.
   struct Example02: View {
     @State private var rotation: Double = 0
     @State private var fillColor: Color = .blue
